@@ -1,0 +1,16 @@
+services:
+  web:
+    build: .
+    ports:
+      - '3000:3000'
+    environment:
+      DATABASE_URL: 'file:./data/cipher-lab.db'
+      NEXT_PUBLIC_SITE_URL: '${NEXT_PUBLIC_SITE_URL:-http://localhost:3000}'
+      # Adds a few sample puzzles on first start; set to "false" for an empty gallery.
+      SEED_SAMPLE_PUZZLES: '${SEED_SAMPLE_PUZZLES:-true}'
+    volumes:
+      - cipher-lab-data:/app/data
+    restart: unless-stopped
+
+volumes:
+  cipher-lab-data:

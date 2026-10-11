@@ -1,0 +1,198 @@
+generator client {
+  provider = "prisma-client"
+  output   = "../src/generated/prisma"
+}
+
+datasource db {
+  provider = "sqlite"
+}
+
+model User {
+  id            String   @id @default(cuid())
+  email         String   @unique
+  username      String   @unique
+  passwordHash  String
+  currentStreak Int      @default(0)
+  longestStreak Int      @default(0)
+  lastSolveDay  String? // UTC day, YYYY-MM-DD
+  createdAt     DateTime @default(now())
+
+  sessions     Session[]
+  puzzles      Puzzle[]
+  progress     PuzzleProgress[]
+  submissions  Submission[]
+  hintUsages   Hint[]
+  achievements UserAchievement[]
+  leaderboard  LeaderboardEntry[]
+
+  @@map("users")
+}
+
+model Session {
+  id        String   @id // SHA-256 of the session token
+  userId    String
+  expiresAt DateTime
+  createdAt DateTime @default(now())
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+  @@map("sessions")
+}
+
+model Puzzle {
+  id                String   @id @default(cuid())
+  authorId          String
+  cipherId          String
+  cipherOptions     Json
+  ciphertext        String
+  answerHash        String // SHA-256 of the normalized plaintext, the plaintext itself is never stored
+  difficulty        String // easy | medium | hard | expert
+  difficultyRank    Int // 1..4, lets the gallery sort by difficulty
+  maxAttempts       Int?
+  timeLimitSeconds  Int?
+  originalLocale    String // en | pl
+  attemptCount      Int      @default(0)
+  solveCount        Int      @default(0)
+  totalSolveSeconds Int      @default(0)
+  createdAt         DateTime @default(now())
+
+  author       User                @relation(fields: [authorId], references: [id], onDelete: Cascade)
+  translations PuzzleTranslation[]
+  tags         PuzzleTag[]
+  progress     PuzzleProgress[]
+  submissions  Submission[]
+  hintUsages   Hint[]
+  leaderboard  LeaderboardEntry[]
+
+  @@index([createdAt])
+  @@index([solveCount])
+  @@index([difficulty])
+  @@index([cipherId])
+  @@index([authorId])
+  @@map("puzzles")
+}
+
+model PuzzleTranslation {
+  id          String  @id @default(cuid())
+  puzzleId    String
+  locale      String // en | pl
+  title       String
+  description String
+  explanation String  @default("")
+  hints       Json // string[], at most 3 entries
+  isOriginal  Boolean @default(false)
+
+  puzzle Puzzle @relation(fields: [puzzleId], references: [id], onDelete: Cascade)
+
+  @@unique([puzzleId, locale])
+  @@index([title])
+  @@map("puzzle_translations")
+}
+
+model Tag {
+  id   String @id @default(cuid())
+  name String @unique
+
+  puzzles PuzzleTag[]
+
+  @@map("tags")
+}
+
+model PuzzleTag {
+  puzzleId String
+  tagId    String
+
+  puzzle Puzzle @relation(fields: [puzzleId], references: [id], onDelete: Cascade)
+  tag    Tag    @relation(fields: [tagId], references: [id], onDelete: Cascade)
+
+  @@id([puzzleId, tagId])
+  @@index([tagId])
+  @@map("puzzle_tags")
+}
+
+// Server-side record of a player's run on a puzzle: the start time drives the timer and time limit.
+model PuzzleProgress {
+  userId    String
+  puzzleId  String
+  startedAt DateTime  @default(now())
+  attempts  Int       @default(0)
+  solvedAt  DateTime?
+
+  user   User   @relation(fields: [userId], references: [id], onDelete: Cascade)
+  puzzle Puzzle @relation(fields: [puzzleId], references: [id], onDelete: Cascade)
+
+  @@id([userId, puzzleId])
+  @@map("puzzle_progress")
+}
+
+model Submission {
+  id             String   @id @default(cuid())
+  userId         String
+  puzzleId       String
+  attemptNumber  Int
+  isCorrect      Boolean
+  elapsedSeconds Int
+  hintsUsed      Int
+  createdAt      DateTime @default(now())
+
+  user   User   @relation(fields: [userId], references: [id], onDelete: Cascade)
+  puzzle Puzzle @relation(fields: [puzzleId], references: [id], onDelete: Cascade)
+
+  @@index([userId, puzzleId])
+  @@index([puzzleId, isCorrect])
+  @@map("submissions")
+}
+
+// A hint revealed by a player. Hint texts live in puzzle_translations.hints.
+model Hint {
+  userId   String
+  puzzleId String
+  position Int // 1..3
+  usedAt   DateTime @default(now())
+
+  user   User   @relation(fields: [userId], references: [id], onDelete: Cascade)
+  puzzle Puzzle @relation(fields: [puzzleId], references: [id], onDelete: Cascade)
+
+  @@id([userId, puzzleId, position])
+  @@map("hints")
+}
+
+model Achievement {
+  id   String @id @default(cuid())
+  code String @unique // name and description are translated under badges.<code>
+
+  users UserAchievement[]
+
+  @@map("achievements")
+}
+
+model UserAchievement {
+  userId        String
+  achievementId String
+  earnedAt      DateTime @default(now())
+
+  user        User        @relation(fields: [userId], references: [id], onDelete: Cascade)
+  achievement Achievement @relation(fields: [achievementId], references: [id], onDelete: Cascade)
+
+  @@id([userId, achievementId])
+  @@map("user_achievements")
+}
+
+model LeaderboardEntry {
+  id             String   @id @default(cuid())
+  userId         String
+  puzzleId       String
+  points         Int
+  elapsedSeconds Int
+  hintsUsed      Int
+  attempts       Int
+  solvedAt       DateTime @default(now())
+
+  user   User   @relation(fields: [userId], references: [id], onDelete: Cascade)
+  puzzle Puzzle @relation(fields: [puzzleId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, puzzleId])
+  @@index([solvedAt])
+  @@map("leaderboard_entries")
+}

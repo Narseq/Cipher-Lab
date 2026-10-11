@@ -1,0 +1,23 @@
+node_modules
+.next
+out
+coverage
+*.tsbuildinfo
+next-env.d.ts
+
+# environment
+.env
+.env.local
+.env.*.local
+
+# database
+/data
+*.db
+*.db-journal
+
+# generated
+/src/generated
+
+# misc
+.DS_Store
+npm-debug.log*

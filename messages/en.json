@@ -1,0 +1,492 @@
+{
+  "meta": {
+    "home": {
+      "title": "Cipher Lab — create, solve and share ciphers",
+      "description": "An open source platform for encrypting text, cracking unknown messages and competing on cipher and logic puzzles."
+    },
+    "solver": {
+      "title": "Cipher Solver",
+      "description": "Paste an encrypted message and let Cipher Lab try Caesar, Base64, Morse, Vigenère, XOR and more."
+    },
+    "puzzles": {
+      "title": "Puzzle gallery",
+      "description": "Browse cipher and logic puzzles made by the community. Filter by difficulty, cipher or tag."
+    },
+    "create": {
+      "title": "Create a puzzle",
+      "description": "Encrypt your own message, add hints and share a public link with other players."
+    },
+    "leaderboard": {
+      "title": "Leaderboard",
+      "description": "The best puzzle solvers today, this week and of all time."
+    },
+    "profile": {
+      "title": "{username}'s profile",
+      "description": "Points, streaks, badges and puzzles of {username} on Cipher Lab."
+    },
+    "login": {
+      "title": "Log in",
+      "description": "Log in to Cipher Lab to solve puzzles and climb the leaderboard."
+    },
+    "register": {
+      "title": "Create an account",
+      "description": "Join Cipher Lab to create puzzles, solve them and earn badges."
+    }
+  },
+  "common": {
+    "skipToContent": "Skip to content",
+    "close": "Close",
+    "pagination": "Pagination",
+    "previous": "Previous",
+    "next": "Next",
+    "pageOf": "Page {page} of {total}"
+  },
+  "nav": {
+    "home": "Home",
+    "solver": "Solver",
+    "puzzles": "Puzzles",
+    "create": "Create",
+    "leaderboard": "Leaderboard",
+    "profile": "Profile",
+    "login": "Log in",
+    "register": "Sign up",
+    "logout": "Log out",
+    "label": "Main",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu"
+  },
+  "theme": {
+    "toggle": "Toggle light and dark theme"
+  },
+  "language": {
+    "label": "Language",
+    "names": {
+      "en": "English",
+      "pl": "Polski"
+    }
+  },
+  "footer": {
+    "tagline": "an open source cipher and puzzle lab",
+    "license": "Released under the MIT license"
+  },
+  "difficulty": {
+    "easy": "Easy",
+    "medium": "Medium",
+    "hard": "Hard",
+    "expert": "Expert"
+  },
+  "home": {
+    "hero": {
+      "title": "Crack the code. Build the puzzle.",
+      "subtitle": "Encrypt messages, analyse unknown ciphertext, create your own challenges and race other players — all in your browser.",
+      "solver": "Open the solver",
+      "puzzles": "Browse puzzles"
+    },
+    "features": {
+      "title": "What you can do",
+      "solver": {
+        "title": "Analyse ciphertext",
+        "description": "Paste a message and the solver tries every known cipher, ranks the readings and charts letter frequencies."
+      },
+      "create": {
+        "title": "Create puzzles",
+        "description": "Pick a cipher, set the key, add hints in two languages and share a public link."
+      },
+      "solve": {
+        "title": "Solve challenges",
+        "description": "Race the clock, spend hints at a price and watch the answer decode on screen."
+      },
+      "rank": {
+        "title": "Climb the ranking",
+        "description": "Earn points, keep your daily streak and collect badges."
+      }
+    },
+    "ciphers": {
+      "title": "Supported ciphers"
+    }
+  },
+  "ciphers": {
+    "caesar": {
+      "description": "Shifts every letter a fixed number of places along the alphabet."
+    },
+    "rot13": {
+      "description": "A Caesar shift by 13, so applying it twice returns the original text."
+    },
+    "atbash": {
+      "description": "Mirrors the alphabet: A becomes Z, B becomes Y and so on."
+    },
+    "base64": {
+      "description": "Encodes bytes using 64 printable characters, often ending with = padding."
+    },
+    "base32": {
+      "description": "Encodes bytes using the letters A–Z and digits 2–7."
+    },
+    "hex": {
+      "description": "Writes every byte of the text as two hexadecimal digits."
+    },
+    "binary": {
+      "description": "Writes every byte of the text as eight zeros and ones."
+    },
+    "morse": {
+      "description": "Dots and dashes; letters are separated by spaces and words by a vertical bar."
+    },
+    "a1z26": {
+      "description": "Replaces every letter with its position in the alphabet, A = 1 to Z = 26."
+    },
+    "vigenere": {
+      "description": "Shifts each letter by the matching letter of a repeating keyword."
+    },
+    "xor": {
+      "description": "Combines every byte with a repeating key using XOR; the result is shown as hex."
+    },
+    "options": {
+      "shift": "Shift",
+      "key": "Key"
+    }
+  },
+  "solver": {
+    "title": "Cipher Solver",
+    "subtitle": "Paste an encrypted message. The solver tries every known cipher and shows the most likely readings, or pick a cipher and key yourself.",
+    "input": "Paste encrypted text",
+    "inputPlaceholder": "Khoor, Zruog! or SGVsbG8sIFdvcmxkIQ== or .... . .-.. .-.. ---",
+    "analyze": "Analyze",
+    "clear": "Clear",
+    "copy": "Copy result",
+    "copied": "Result copied to the clipboard",
+    "copyFailed": "Could not copy the result",
+    "cipher": "Cipher",
+    "markCorrect": "Mark as correct",
+    "markedCorrect": "Marked as correct",
+    "markedCorrectToast": "Result marked as correct",
+    "mode": {
+      "label": "Mode",
+      "auto": "Automatic",
+      "manual": "Manual"
+    },
+    "operation": {
+      "label": "Operation",
+      "decrypt": "Decrypt",
+      "encrypt": "Encrypt"
+    },
+    "results": {
+      "title": "Most likely results",
+      "idle": "Press Analyze (or Ctrl+Enter) to try all ciphers on your text.",
+      "empty": "No convincing reading found. Try the manual mode to choose a cipher and key.",
+      "confidence": "{percent}% match"
+    },
+    "output": {
+      "title": "Result",
+      "empty": "The result appears here."
+    },
+    "stats": {
+      "title": "Text statistics",
+      "characters": "Characters",
+      "words": "Words",
+      "digits": "Digits",
+      "special": "Special characters"
+    },
+    "frequency": {
+      "title": "Letter frequency",
+      "description": "Share of each letter in the input text, compared with the selected result.",
+      "empty": "Enter some text to see its letter frequencies.",
+      "chartLabel": "Bar chart of letter frequencies from A to Z",
+      "input": "Input",
+      "result": "Result"
+    }
+  },
+  "auth": {
+    "login": {
+      "title": "Log in",
+      "subtitle": "Welcome back. Log in to solve and create puzzles.",
+      "submit": "Log in",
+      "pending": "Logging in…",
+      "success": "Welcome back, {username}!",
+      "switchPrompt": "No account yet?",
+      "switchLink": "Sign up"
+    },
+    "register": {
+      "title": "Create an account",
+      "subtitle": "Create puzzles, solve them and collect points and badges.",
+      "submit": "Sign up",
+      "pending": "Creating account…",
+      "success": "Welcome to Cipher Lab, {username}!",
+      "switchPrompt": "Already have an account?",
+      "switchLink": "Log in"
+    },
+    "fields": {
+      "email": "Email",
+      "emailPlaceholder": "you@example.com",
+      "username": "Username",
+      "usernamePlaceholder": "cipher_fan",
+      "password": "Password"
+    },
+    "loggedOut": "You have been logged out"
+  },
+  "puzzles": {
+    "title": "Puzzle gallery",
+    "subtitle": "Cipher and logic puzzles made by the community.",
+    "count": "{count, plural, =0 {No puzzles} one {# puzzle} other {# puzzles}}",
+    "filters": {
+      "label": "Filter puzzles",
+      "search": "Search",
+      "searchPlaceholder": "Title or tag",
+      "difficulty": "Difficulty",
+      "cipher": "Cipher",
+      "tag": "Tag",
+      "sort": "Sort by",
+      "any": "Any",
+      "apply": "Apply filters",
+      "reset": "Reset",
+      "sorts": {
+        "newest": "Newest",
+        "popular": "Most popular",
+        "hardest": "Hardest"
+      }
+    },
+    "empty": {
+      "title": "No puzzles found",
+      "description": "Nothing matches these filters. Reset them, or be the first to create a puzzle like this.",
+      "create": "Create a puzzle"
+    },
+    "card": {
+      "tags": "Cipher and tags",
+      "solves": "{count, plural, one {# solve} other {# solves}}",
+      "solvesLabel": "Solves",
+      "attempts": "{count, plural, one {# attempt} other {# attempts}}",
+      "attemptsLabel": "Attempts",
+      "averageTimeLabel": "Average solve time",
+      "noSolvesYet": "No solves yet",
+      "by": "by {author}",
+      "onlyIn": {
+        "en": "Available only in English",
+        "pl": "Available only in Polish"
+      }
+    }
+  },
+  "create": {
+    "title": "Create a puzzle",
+    "subtitle": "Write the message, choose a cipher and share the public link.",
+    "sections": {
+      "text": "Puzzle text ({language})",
+      "translation": "Translation",
+      "cipher": "Message and cipher",
+      "rules": "Rules"
+    },
+    "fields": {
+      "originalLanguage": "Language of the text",
+      "title": "Title",
+      "description": "Description",
+      "explanation": "Explanation",
+      "explanationHint": "Shown to players after they solve the puzzle.",
+      "hints": "Hints",
+      "hintN": "Hint {number}",
+      "addHint": "Add a hint",
+      "removeHint": "Remove hint {number}",
+      "plaintext": "Secret message",
+      "plaintextHint": "This is the answer. It is encrypted before it is saved.",
+      "cipher": "Cipher",
+      "preview": "Encrypted preview",
+      "previewEmpty": "Type a message to see how it will look encrypted.",
+      "difficulty": "Difficulty",
+      "maxAttempts": "Maximum attempts",
+      "timeLimit": "Time limit (seconds)",
+      "unlimitedHint": "Leave empty for no limit.",
+      "tags": "Tags",
+      "tagsHint": "Up to 5, separated by spaces or commas.",
+      "tagsPlaceholder": "logic beginner story"
+    },
+    "translation": {
+      "add": {
+        "en": "Add English version",
+        "pl": "Add Polish version"
+      },
+      "remove": "Remove the translation",
+      "hint": "Optional. Without it, players who browse in the other language see the original text with a note."
+    },
+    "submit": "Create puzzle",
+    "pending": "Creating…",
+    "success": {
+      "title": "Puzzle created",
+      "description": "Share this public link so others can solve it.",
+      "linkLabel": "Public link",
+      "copy": "Copy link",
+      "copied": "Link copied to the clipboard",
+      "copyFailed": "Could not copy the link",
+      "open": "Open the puzzle"
+    }
+  },
+  "play": {
+    "backToGallery": "All puzzles",
+    "details": "Puzzle details",
+    "by": "by {author}",
+    "timeLimit": "Time limit {time}",
+    "onlyIn": {
+      "en": "Available only in English",
+      "pl": "Available only in Polish"
+    },
+    "message": "Encrypted message",
+    "copy": "Copy",
+    "copied": "Message copied to the clipboard",
+    "copyFailed": "Could not copy the message",
+    "loginRequired": "Log in to solve this puzzle, save your time and enter the leaderboard.",
+    "login": "Log in",
+    "register": "Sign up",
+    "loading": "Preparing the puzzle…",
+    "answer": "Your answer",
+    "answerPlaceholder": "Type the decrypted message",
+    "submit": "Check answer",
+    "wrong": "That is not the answer. Try again.",
+    "correctToast": "Correct! Puzzle solved.",
+    "timeUp": "Time is up. You can no longer answer this puzzle.",
+    "noAttemptsLeft": "You have used all your attempts.",
+    "sidebar": "Progress and hints",
+    "elapsed": "Time",
+    "remaining": "Time left",
+    "attemptsLabel": "Attempts",
+    "attemptsUsed": "{count, plural, =0 {No attempts yet} one {# attempt used} other {# attempts used}}",
+    "hints": {
+      "title": "Hints",
+      "reveal": "Reveal hint {position} (−{penalty}% points)",
+      "available": "{count, plural, one {# hint available} other {# hints available}}. Each one lowers your score."
+    },
+    "solved": {
+      "title": "Puzzle solved!",
+      "points": "Points",
+      "time": "Time",
+      "solvedIn": "Solved in {seconds, plural, one {# second} other {# seconds}}",
+      "attempts": "Attempts",
+      "hintsUsed": "Hints used",
+      "cipher": "Cipher used",
+      "explanation": "Explanation",
+      "streak": "{days, plural, one {# day} other {# days}} streak",
+      "newBadges": "New badges",
+      "more": "Find more puzzles"
+    }
+  },
+  "leaderboard": {
+    "title": "Leaderboard",
+    "subtitle": "Points are earned for every solved puzzle; harder puzzles and fewer hints score more.",
+    "periodLabel": "Time range",
+    "periods": {
+      "daily": "Today",
+      "weekly": "This week",
+      "global": "All time"
+    },
+    "columns": {
+      "rank": "Rank",
+      "player": "Player",
+      "solved": "Solved",
+      "points": "Points"
+    },
+    "empty": "Nobody has scored in this period yet."
+  },
+  "profile": {
+    "joined": "Joined {date}",
+    "days": "{count, plural, one {# day} other {# days}}",
+    "stats": {
+      "points": "Points",
+      "solved": "Puzzles solved",
+      "streak": "Current streak",
+      "longestStreak": "Longest streak"
+    },
+    "badges": {
+      "title": "Badges",
+      "earned": "Earned {date}",
+      "locked": "Not earned yet"
+    },
+    "solved": {
+      "title": "Solved puzzles",
+      "empty": "No puzzles solved yet.",
+      "puzzle": "Puzzle",
+      "date": "Date",
+      "time": "Time",
+      "points": "Points"
+    },
+    "created": {
+      "title": "Created puzzles",
+      "empty": "No puzzles created yet."
+    }
+  },
+  "badges": {
+    "firstSolve": {
+      "name": "First Solve",
+      "description": "Solve your first puzzle."
+    },
+    "cipherMaster": {
+      "name": "Cipher Master",
+      "description": "Solve puzzles that use five different ciphers."
+    },
+    "noHints": {
+      "name": "No Hints",
+      "description": "Solve five puzzles without revealing a single hint."
+    },
+    "speedSolver": {
+      "name": "Speed Solver",
+      "description": "Solve a puzzle in 60 seconds or less."
+    },
+    "weekStreak": {
+      "name": "Week Streak",
+      "description": "Solve at least one puzzle a day for seven days in a row."
+    },
+    "creator": {
+      "name": "Puzzle Maker",
+      "description": "Publish your first puzzle."
+    }
+  },
+  "validation": {
+    "required": "This field is required.",
+    "invalid": "This value is not valid.",
+    "emailInvalid": "Enter a valid email address.",
+    "usernameInvalid": "Use 3–20 letters, digits or underscores.",
+    "passwordTooShort": "The password needs at least 8 characters.",
+    "passwordTooLong": "The password can have at most 72 characters.",
+    "titleTooShort": "The title needs at least 3 characters.",
+    "titleTooLong": "The title can have at most 80 characters.",
+    "descriptionTooLong": "The description can have at most 1000 characters.",
+    "explanationTooLong": "The explanation can have at most 1000 characters.",
+    "hintTooLong": "A hint can have at most 300 characters.",
+    "tooManyHints": "A puzzle can have at most 3 hints.",
+    "hintCountMismatch": "The translation needs the same number of hints as the original.",
+    "tagInvalid": "Tags use 2–24 lowercase letters, digits or dashes.",
+    "tooManyTags": "A puzzle can have at most 5 tags.",
+    "plaintextTooLong": "The message can have at most 500 characters.",
+    "attemptsInvalid": "Enter a whole number from 1 to 100.",
+    "timeLimitInvalid": "Enter a time between 30 and 86400 seconds.",
+    "cipherInvalidInput": "This message cannot be encrypted with the chosen cipher.",
+    "cipherUnsupportedCharacter": "The message contains a character this cipher cannot encode.",
+    "cipherInvalidKey": "The key or shift is not valid for this cipher."
+  },
+  "errors": {
+    "api": {
+      "validation": "Some of the data is not valid. Check the form and try again.",
+      "unauthorized": "Log in to do that.",
+      "forbidden": "You are not allowed to do that.",
+      "notFound": "We could not find what you were looking for.",
+      "rateLimited": "Too many requests. Wait a moment and try again.",
+      "emailTaken": "An account with this email already exists.",
+      "usernameTaken": "This username is already taken.",
+      "invalidCredentials": "Wrong email or password.",
+      "attemptsExhausted": "You have used all your attempts.",
+      "timeUp": "Time is up for this puzzle.",
+      "alreadySolved": "You have already solved this puzzle.",
+      "hintOrder": "Reveal the hints in order.",
+      "cipherFailed": "The message could not be encrypted.",
+      "internal": "Something went wrong. Please try again later."
+    },
+    "cipher": {
+      "invalidInput": "This text is not valid input for the selected cipher.",
+      "unsupportedCharacter": "The character “{char}” is not supported by this cipher.",
+      "invalidKey": "The key or shift is not valid for this cipher."
+    }
+  },
+  "notFound": {
+    "title": "Page not found",
+    "description": "The page you are looking for does not exist or has been moved.",
+    "home": "Back to the home page"
+  },
+  "error": {
+    "title": "Something went wrong",
+    "description": "An unexpected error occurred. Please try again.",
+    "retry": "Try again"
+  }
+}

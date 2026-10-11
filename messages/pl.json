@@ -1,0 +1,492 @@
+{
+  "meta": {
+    "home": {
+      "title": "Cipher Lab — twórz, łam i udostępniaj szyfry",
+      "description": "Otwartoźródłowa platforma do szyfrowania tekstu, łamania nieznanych wiadomości i rywalizacji w zagadkach szyfrowych i logicznych."
+    },
+    "solver": {
+      "title": "Łamacz szyfrów",
+      "description": "Wklej zaszyfrowaną wiadomość, a Cipher Lab sprawdzi Caesar, Base64, Morse, Vigenère, XOR i inne szyfry."
+    },
+    "puzzles": {
+      "title": "Galeria zagadek",
+      "description": "Przeglądaj zagadki szyfrowe i logiczne stworzone przez społeczność. Filtruj po trudności, szyfrze lub tagu."
+    },
+    "create": {
+      "title": "Stwórz zagadkę",
+      "description": "Zaszyfruj własną wiadomość, dodaj podpowiedzi i udostępnij publiczny link innym graczom."
+    },
+    "leaderboard": {
+      "title": "Ranking",
+      "description": "Najlepsi rozwiązujący zagadki dzisiaj, w tym tygodniu i w całej historii."
+    },
+    "profile": {
+      "title": "Profil użytkownika {username}",
+      "description": "Punkty, serie, odznaki i zagadki użytkownika {username} w Cipher Lab."
+    },
+    "login": {
+      "title": "Zaloguj się",
+      "description": "Zaloguj się do Cipher Lab, aby rozwiązywać zagadki i wspinać się w rankingu."
+    },
+    "register": {
+      "title": "Załóż konto",
+      "description": "Dołącz do Cipher Lab, aby tworzyć zagadki, rozwiązywać je i zdobywać odznaki."
+    }
+  },
+  "common": {
+    "skipToContent": "Przejdź do treści",
+    "close": "Zamknij",
+    "pagination": "Paginacja",
+    "previous": "Poprzednia",
+    "next": "Następna",
+    "pageOf": "Strona {page} z {total}"
+  },
+  "nav": {
+    "home": "Strona główna",
+    "solver": "Solver",
+    "puzzles": "Zagadki",
+    "create": "Stwórz",
+    "leaderboard": "Ranking",
+    "profile": "Profil",
+    "login": "Zaloguj się",
+    "register": "Załóż konto",
+    "logout": "Wyloguj się",
+    "label": "Główna",
+    "openMenu": "Otwórz menu",
+    "closeMenu": "Zamknij menu"
+  },
+  "theme": {
+    "toggle": "Przełącz jasny i ciemny motyw"
+  },
+  "language": {
+    "label": "Język",
+    "names": {
+      "en": "English",
+      "pl": "Polski"
+    }
+  },
+  "footer": {
+    "tagline": "otwartoźródłowe laboratorium szyfrów i zagadek",
+    "license": "Udostępniono na licencji MIT"
+  },
+  "difficulty": {
+    "easy": "Łatwa",
+    "medium": "Średnia",
+    "hard": "Trudna",
+    "expert": "Ekspercka"
+  },
+  "home": {
+    "hero": {
+      "title": "Złam kod. Stwórz zagadkę.",
+      "subtitle": "Szyfruj wiadomości, analizuj nieznane szyfrogramy, twórz własne wyzwania i ścigaj się z innymi graczami — wszystko w przeglądarce.",
+      "solver": "Otwórz solver",
+      "puzzles": "Przeglądaj zagadki"
+    },
+    "features": {
+      "title": "Co możesz zrobić",
+      "solver": {
+        "title": "Analizuj szyfrogramy",
+        "description": "Wklej wiadomość, a solver sprawdzi wszystkie znane szyfry, uszereguje wyniki i pokaże wykres częstotliwości liter."
+      },
+      "create": {
+        "title": "Twórz zagadki",
+        "description": "Wybierz szyfr, ustaw klucz, dodaj podpowiedzi w dwóch językach i udostępnij publiczny link."
+      },
+      "solve": {
+        "title": "Rozwiązuj wyzwania",
+        "description": "Ścigaj się z czasem, korzystaj z podpowiedzi za punkty karne i patrz, jak odpowiedź dekoduje się na ekranie."
+      },
+      "rank": {
+        "title": "Wspinaj się w rankingu",
+        "description": "Zdobywaj punkty, utrzymuj dzienną serię i zbieraj odznaki."
+      }
+    },
+    "ciphers": {
+      "title": "Obsługiwane szyfry"
+    }
+  },
+  "ciphers": {
+    "caesar": {
+      "description": "Przesuwa każdą literę o stałą liczbę miejsc w alfabecie."
+    },
+    "rot13": {
+      "description": "Przesunięcie Caesara o 13, więc dwukrotne użycie przywraca oryginalny tekst."
+    },
+    "atbash": {
+      "description": "Odwraca alfabet: A zamienia się w Z, B w Y i tak dalej."
+    },
+    "base64": {
+      "description": "Koduje bajty za pomocą 64 drukowalnych znaków, często z dopełnieniem =."
+    },
+    "base32": {
+      "description": "Koduje bajty za pomocą liter A–Z i cyfr 2–7."
+    },
+    "hex": {
+      "description": "Zapisuje każdy bajt tekstu jako dwie cyfry szesnastkowe."
+    },
+    "binary": {
+      "description": "Zapisuje każdy bajt tekstu jako osiem zer i jedynek."
+    },
+    "morse": {
+      "description": "Kropki i kreski; litery oddzielone są spacjami, a wyrazy pionową kreską."
+    },
+    "a1z26": {
+      "description": "Zastępuje każdą literę jej numerem w alfabecie, od A = 1 do Z = 26."
+    },
+    "vigenere": {
+      "description": "Przesuwa każdą literę o wartość odpowiadającej jej litery powtarzanego słowa kluczowego."
+    },
+    "xor": {
+      "description": "Łączy każdy bajt z powtarzanym kluczem operacją XOR; wynik jest pokazany szesnastkowo."
+    },
+    "options": {
+      "shift": "Przesunięcie",
+      "key": "Klucz"
+    }
+  },
+  "solver": {
+    "title": "Łamacz szyfrów",
+    "subtitle": "Wklej zaszyfrowaną wiadomość. Solver sprawdzi wszystkie znane szyfry i pokaże najbardziej prawdopodobne odczytania albo wybierz szyfr i klucz samodzielnie.",
+    "input": "Wklej zaszyfrowany tekst",
+    "inputPlaceholder": "Khoor, Zruog! lub SGVsbG8sIFdvcmxkIQ== lub .... . .-.. .-.. ---",
+    "analyze": "Analizuj",
+    "clear": "Wyczyść",
+    "copy": "Kopiuj wynik",
+    "copied": "Skopiowano wynik do schowka",
+    "copyFailed": "Nie udało się skopiować wyniku",
+    "cipher": "Szyfr",
+    "markCorrect": "Oznacz jako poprawny",
+    "markedCorrect": "Oznaczono jako poprawny",
+    "markedCorrectToast": "Wynik oznaczony jako poprawny",
+    "mode": {
+      "label": "Tryb",
+      "auto": "Automatyczny",
+      "manual": "Ręczny"
+    },
+    "operation": {
+      "label": "Operacja",
+      "decrypt": "Odszyfruj",
+      "encrypt": "Zaszyfruj"
+    },
+    "results": {
+      "title": "Najbardziej prawdopodobne wyniki",
+      "idle": "Naciśnij Analizuj (lub Ctrl+Enter), aby sprawdzić wszystkie szyfry na Twoim tekście.",
+      "empty": "Nie znaleziono przekonującego odczytania. Spróbuj trybu ręcznego, aby wybrać szyfr i klucz.",
+      "confidence": "Zgodność: {percent}%"
+    },
+    "output": {
+      "title": "Wynik",
+      "empty": "Tutaj pojawi się wynik."
+    },
+    "stats": {
+      "title": "Statystyki tekstu",
+      "characters": "Znaki",
+      "words": "Słowa",
+      "digits": "Cyfry",
+      "special": "Znaki specjalne"
+    },
+    "frequency": {
+      "title": "Częstotliwość liter",
+      "description": "Udział każdej litery w tekście wejściowym na tle wybranego wyniku.",
+      "empty": "Wpisz tekst, aby zobaczyć częstotliwość liter.",
+      "chartLabel": "Wykres słupkowy częstotliwości liter od A do Z",
+      "input": "Wejście",
+      "result": "Wynik"
+    }
+  },
+  "auth": {
+    "login": {
+      "title": "Zaloguj się",
+      "subtitle": "Witaj ponownie. Zaloguj się, aby rozwiązywać i tworzyć zagadki.",
+      "submit": "Zaloguj się",
+      "pending": "Logowanie…",
+      "success": "Witaj ponownie, {username}!",
+      "switchPrompt": "Nie masz jeszcze konta?",
+      "switchLink": "Załóż konto"
+    },
+    "register": {
+      "title": "Załóż konto",
+      "subtitle": "Twórz zagadki, rozwiązuj je i zbieraj punkty oraz odznaki.",
+      "submit": "Załóż konto",
+      "pending": "Zakładanie konta…",
+      "success": "Witaj w Cipher Lab, {username}!",
+      "switchPrompt": "Masz już konto?",
+      "switchLink": "Zaloguj się"
+    },
+    "fields": {
+      "email": "E-mail",
+      "emailPlaceholder": "ty@example.com",
+      "username": "Nazwa użytkownika",
+      "usernamePlaceholder": "fan_szyfrow",
+      "password": "Hasło"
+    },
+    "loggedOut": "Wylogowano"
+  },
+  "puzzles": {
+    "title": "Galeria zagadek",
+    "subtitle": "Zagadki szyfrowe i logiczne stworzone przez społeczność.",
+    "count": "{count, plural, =0 {Brak zagadek} one {# zagadka} few {# zagadki} many {# zagadek} other {# zagadki}}",
+    "filters": {
+      "label": "Filtruj zagadki",
+      "search": "Szukaj",
+      "searchPlaceholder": "Tytuł lub tag",
+      "difficulty": "Trudność",
+      "cipher": "Szyfr",
+      "tag": "Tag",
+      "sort": "Sortuj według",
+      "any": "Dowolny",
+      "apply": "Zastosuj filtry",
+      "reset": "Wyczyść",
+      "sorts": {
+        "newest": "Najnowsze",
+        "popular": "Najpopularniejsze",
+        "hardest": "Najtrudniejsze"
+      }
+    },
+    "empty": {
+      "title": "Nie znaleziono zagadek",
+      "description": "Nic nie pasuje do tych filtrów. Wyczyść je albo stwórz pierwszą taką zagadkę.",
+      "create": "Stwórz zagadkę"
+    },
+    "card": {
+      "tags": "Szyfr i tagi",
+      "solves": "{count, plural, one {# rozwiązanie} few {# rozwiązania} many {# rozwiązań} other {# rozwiązania}}",
+      "solvesLabel": "Rozwiązania",
+      "attempts": "{count, plural, one {# próba} few {# próby} many {# prób} other {# próby}}",
+      "attemptsLabel": "Próby",
+      "averageTimeLabel": "Średni czas rozwiązania",
+      "noSolvesYet": "Brak rozwiązań",
+      "by": "autor: {author}",
+      "onlyIn": {
+        "en": "Dostępne tylko po angielsku",
+        "pl": "Dostępne tylko po polsku"
+      }
+    }
+  },
+  "create": {
+    "title": "Stwórz zagadkę",
+    "subtitle": "Napisz wiadomość, wybierz szyfr i udostępnij publiczny link.",
+    "sections": {
+      "text": "Treść zagadki ({language})",
+      "translation": "Tłumaczenie",
+      "cipher": "Wiadomość i szyfr",
+      "rules": "Zasady"
+    },
+    "fields": {
+      "originalLanguage": "Język treści",
+      "title": "Tytuł",
+      "description": "Opis",
+      "explanation": "Wyjaśnienie",
+      "explanationHint": "Gracze zobaczą je po rozwiązaniu zagadki.",
+      "hints": "Podpowiedzi",
+      "hintN": "Podpowiedź {number}",
+      "addHint": "Dodaj podpowiedź",
+      "removeHint": "Usuń podpowiedź {number}",
+      "plaintext": "Tajna wiadomość",
+      "plaintextHint": "To jest odpowiedź. Przed zapisaniem zostanie zaszyfrowana.",
+      "cipher": "Szyfr",
+      "preview": "Podgląd szyfrogramu",
+      "previewEmpty": "Wpisz wiadomość, aby zobaczyć, jak będzie wyglądać po zaszyfrowaniu.",
+      "difficulty": "Poziom trudności",
+      "maxAttempts": "Maksymalna liczba prób",
+      "timeLimit": "Limit czasu (w sekundach)",
+      "unlimitedHint": "Zostaw puste, aby nie ustawiać limitu.",
+      "tags": "Tagi",
+      "tagsHint": "Do 5, oddzielone spacjami lub przecinkami.",
+      "tagsPlaceholder": "logika poczatkujacy historia"
+    },
+    "translation": {
+      "add": {
+        "en": "Dodaj wersję angielską",
+        "pl": "Dodaj wersję polską"
+      },
+      "remove": "Usuń tłumaczenie",
+      "hint": "Opcjonalne. Bez niego gracze przeglądający stronę w drugim języku zobaczą oryginalny tekst z odpowiednią informacją."
+    },
+    "submit": "Utwórz zagadkę",
+    "pending": "Tworzenie…",
+    "success": {
+      "title": "Zagadka utworzona",
+      "description": "Udostępnij ten publiczny link, aby inni mogli ją rozwiązać.",
+      "linkLabel": "Publiczny link",
+      "copy": "Kopiuj link",
+      "copied": "Skopiowano link do schowka",
+      "copyFailed": "Nie udało się skopiować linku",
+      "open": "Otwórz zagadkę"
+    }
+  },
+  "play": {
+    "backToGallery": "Wszystkie zagadki",
+    "details": "Szczegóły zagadki",
+    "by": "autor: {author}",
+    "timeLimit": "Limit czasu: {time}",
+    "onlyIn": {
+      "en": "Dostępne tylko po angielsku",
+      "pl": "Dostępne tylko po polsku"
+    },
+    "message": "Zaszyfrowana wiadomość",
+    "copy": "Kopiuj",
+    "copied": "Skopiowano wiadomość do schowka",
+    "copyFailed": "Nie udało się skopiować wiadomości",
+    "loginRequired": "Zaloguj się, aby rozwiązać tę zagadkę, zapisać swój czas i trafić do rankingu.",
+    "login": "Zaloguj się",
+    "register": "Załóż konto",
+    "loading": "Przygotowywanie zagadki…",
+    "answer": "Twoja odpowiedź",
+    "answerPlaceholder": "Wpisz odszyfrowaną wiadomość",
+    "submit": "Sprawdź odpowiedź",
+    "wrong": "To nie jest poprawna odpowiedź. Spróbuj ponownie.",
+    "correctToast": "Dobrze! Zagadka rozwiązana.",
+    "timeUp": "Czas minął. Nie możesz już odpowiadać na tę zagadkę.",
+    "noAttemptsLeft": "Wykorzystano wszystkie próby.",
+    "sidebar": "Postępy i podpowiedzi",
+    "elapsed": "Czas",
+    "remaining": "Pozostały czas",
+    "attemptsLabel": "Próby",
+    "attemptsUsed": "{count, plural, =0 {Brak prób} one {Wykorzystano # próbę} few {Wykorzystano # próby} many {Wykorzystano # prób} other {Wykorzystano # próby}}",
+    "hints": {
+      "title": "Podpowiedzi",
+      "reveal": "Pokaż podpowiedź {position} (−{penalty}% punktów)",
+      "available": "Liczba podpowiedzi: {count}. Każda obniża Twój wynik."
+    },
+    "solved": {
+      "title": "Zagadka rozwiązana!",
+      "points": "Punkty",
+      "time": "Czas",
+      "solvedIn": "Rozwiązano w {seconds, plural, one {# sekundę} few {# sekundy} many {# sekund} other {# sekundy}}",
+      "attempts": "Próby",
+      "hintsUsed": "Użyte podpowiedzi",
+      "cipher": "Użyty szyfr",
+      "explanation": "Wyjaśnienie",
+      "streak": "Seria: {days, plural, one {# dzień} other {# dni}}",
+      "newBadges": "Nowe odznaki",
+      "more": "Znajdź więcej zagadek"
+    }
+  },
+  "leaderboard": {
+    "title": "Ranking",
+    "subtitle": "Punkty dostaje się za każdą rozwiązaną zagadkę; trudniejsze zagadki i mniej podpowiedzi to więcej punktów.",
+    "periodLabel": "Zakres czasu",
+    "periods": {
+      "daily": "Dzisiaj",
+      "weekly": "W tym tygodniu",
+      "global": "Wszech czasów"
+    },
+    "columns": {
+      "rank": "Miejsce",
+      "player": "Gracz",
+      "solved": "Rozwiązane",
+      "points": "Punkty"
+    },
+    "empty": "W tym okresie nikt jeszcze nie zdobył punktów."
+  },
+  "profile": {
+    "joined": "Data dołączenia: {date}",
+    "days": "{count, plural, one {# dzień} other {# dni}}",
+    "stats": {
+      "points": "Punkty",
+      "solved": "Rozwiązane zagadki",
+      "streak": "Obecna seria",
+      "longestStreak": "Najdłuższa seria"
+    },
+    "badges": {
+      "title": "Odznaki",
+      "earned": "Zdobyto: {date}",
+      "locked": "Jeszcze nie zdobyto"
+    },
+    "solved": {
+      "title": "Rozwiązane zagadki",
+      "empty": "Nie rozwiązano jeszcze żadnej zagadki.",
+      "puzzle": "Zagadka",
+      "date": "Data",
+      "time": "Czas",
+      "points": "Punkty"
+    },
+    "created": {
+      "title": "Stworzone zagadki",
+      "empty": "Nie stworzono jeszcze żadnej zagadki."
+    }
+  },
+  "badges": {
+    "firstSolve": {
+      "name": "Pierwsze rozwiązanie",
+      "description": "Rozwiąż swoją pierwszą zagadkę."
+    },
+    "cipherMaster": {
+      "name": "Mistrz szyfrów",
+      "description": "Rozwiąż zagadki wykorzystujące pięć różnych szyfrów."
+    },
+    "noHints": {
+      "name": "Bez podpowiedzi",
+      "description": "Rozwiąż pięć zagadek, nie odkrywając ani jednej podpowiedzi."
+    },
+    "speedSolver": {
+      "name": "Błyskawica",
+      "description": "Rozwiąż zagadkę w 60 sekund lub szybciej."
+    },
+    "weekStreak": {
+      "name": "Tydzień z rzędu",
+      "description": "Rozwiązuj co najmniej jedną zagadkę dziennie przez siedem dni z rzędu."
+    },
+    "creator": {
+      "name": "Twórca zagadek",
+      "description": "Opublikuj swoją pierwszą zagadkę."
+    }
+  },
+  "validation": {
+    "required": "To pole jest wymagane.",
+    "invalid": "Ta wartość jest nieprawidłowa.",
+    "emailInvalid": "Podaj poprawny adres e-mail.",
+    "usernameInvalid": "Użyj 3–20 liter, cyfr lub podkreślników.",
+    "passwordTooShort": "Hasło musi mieć co najmniej 8 znaków.",
+    "passwordTooLong": "Hasło może mieć najwyżej 72 znaki.",
+    "titleTooShort": "Tytuł musi mieć co najmniej 3 znaki.",
+    "titleTooLong": "Tytuł może mieć najwyżej 80 znaków.",
+    "descriptionTooLong": "Opis może mieć najwyżej 1000 znaków.",
+    "explanationTooLong": "Wyjaśnienie może mieć najwyżej 1000 znaków.",
+    "hintTooLong": "Podpowiedź może mieć najwyżej 300 znaków.",
+    "tooManyHints": "Zagadka może mieć najwyżej 3 podpowiedzi.",
+    "hintCountMismatch": "Tłumaczenie musi mieć tyle samo podpowiedzi co oryginał.",
+    "tagInvalid": "Tagi mogą mieć 2–24 małe litery, cyfry lub myślniki.",
+    "tooManyTags": "Zagadka może mieć najwyżej 5 tagów.",
+    "plaintextTooLong": "Wiadomość może mieć najwyżej 500 znaków.",
+    "attemptsInvalid": "Podaj liczbę całkowitą od 1 do 100.",
+    "timeLimitInvalid": "Podaj czas od 30 do 86400 sekund.",
+    "cipherInvalidInput": "Tej wiadomości nie można zaszyfrować wybranym szyfrem.",
+    "cipherUnsupportedCharacter": "Wiadomość zawiera znak, którego ten szyfr nie obsługuje.",
+    "cipherInvalidKey": "Klucz lub przesunięcie jest nieprawidłowe dla tego szyfru."
+  },
+  "errors": {
+    "api": {
+      "validation": "Część danych jest nieprawidłowa. Sprawdź formularz i spróbuj ponownie.",
+      "unauthorized": "Zaloguj się, aby to zrobić.",
+      "forbidden": "Nie masz uprawnień do tej czynności.",
+      "notFound": "Nie znaleziono tego, czego szukasz.",
+      "rateLimited": "Zbyt wiele żądań. Odczekaj chwilę i spróbuj ponownie.",
+      "emailTaken": "Konto z tym adresem e-mail już istnieje.",
+      "usernameTaken": "Ta nazwa użytkownika jest już zajęta.",
+      "invalidCredentials": "Nieprawidłowy e-mail lub hasło.",
+      "attemptsExhausted": "Wykorzystano wszystkie próby.",
+      "timeUp": "Czas na tę zagadkę minął.",
+      "alreadySolved": "Ta zagadka jest już przez Ciebie rozwiązana.",
+      "hintOrder": "Odkrywaj podpowiedzi po kolei.",
+      "cipherFailed": "Nie udało się zaszyfrować wiadomości.",
+      "internal": "Coś poszło nie tak. Spróbuj ponownie później."
+    },
+    "cipher": {
+      "invalidInput": "Ten tekst nie jest poprawnym wejściem dla wybranego szyfru.",
+      "unsupportedCharacter": "Znak „{char}” nie jest obsługiwany przez ten szyfr.",
+      "invalidKey": "Klucz lub przesunięcie jest nieprawidłowe dla tego szyfru."
+    }
+  },
+  "notFound": {
+    "title": "Nie znaleziono strony",
+    "description": "Strona, której szukasz, nie istnieje lub została przeniesiona.",
+    "home": "Wróć na stronę główną"
+  },
+  "error": {
+    "title": "Coś poszło nie tak",
+    "description": "Wystąpił nieoczekiwany błąd. Spróbuj ponownie.",
+    "retry": "Spróbuj ponownie"
+  }
+}
